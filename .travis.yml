@@ -1,17 +1,18 @@
 sudo: required
 before_install:
   -sudo apt install libgtest-dev -y
+  
+language:
+  - cpp
+compiler:
+  - gcc
+install:
   -cd /usr/src/googletest/googletest && cmake CMakeLists.txt && make
   -cd /usr/src/googletest/googlemock && cmake CMakeLists.txt && make
   -cp /usr/src/googletest/googletest/libgtest.a /usr/lib
   -cp /usr/src/googletest/googletest//libgtest_main.a /usr/lib
   -cp /usr/src/googletest/googlemock/libgmock_main.a /usr/lib
   -cp /usr/src/googletest/googlemock/libgmock.a /usr/lib
-language:
-  - cpp
-compiler:
-  - gcc
-
 script:
   - cmake .
   - make
