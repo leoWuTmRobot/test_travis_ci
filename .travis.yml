@@ -1,6 +1,6 @@
 sudo: required
 before_install:
-  -sudo apt install libgtest-dev -y
+  sudo apt install libgtest-dev -y
   
 language:
   - cpp
