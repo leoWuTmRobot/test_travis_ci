@@ -17,7 +17,7 @@ TEST_F(FunctionTest,minuse_test){
   Function f;
   f.set_number1(1);
   f.set_number2(3);
-  EXPECT_EQ(f.get_minuse(),-1);
+  EXPECT_EQ(f.get_minuse(),-2);
 }
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
