@@ -24,7 +24,7 @@ script:
   - cmake .
   - make
   - ./bin/test_ci_gtest 
-  - ./get_code_cov.sh
+  - sudo ./get_code_cov.sh
   
 after_success:
     - bash <(curl -s https://codecov.io/bash)
