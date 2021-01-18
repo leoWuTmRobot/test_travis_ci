@@ -10,5 +10,5 @@ int Function::get_add(){
   return number1+number2;
 }
 int Function::get_minuse(){
-  return number1+number2;// this is error, and try test can get this error or not
+  return number1-number2;// this is error, and try test can get this error or not
 }
