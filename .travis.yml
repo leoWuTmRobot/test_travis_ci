@@ -21,3 +21,4 @@ script:
   - cd /home/travis/build/leoWuTmRobot/test_travis_ci
   - cmake .
   - make
+  - ./bin/test_ci_gtest 
