@@ -18,6 +18,6 @@ install:
   - sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
   - sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
 script:
-  - cd leoWuTmRobot/test_travis_ci
+  - cd /home/travis/build/leoWuTmRobot/test_travis_ci
   - cmake .
   - make
