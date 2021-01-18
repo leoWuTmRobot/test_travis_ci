@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get install libgtest-dev -y
   - sudo apt-get install cmake
 install:
-  - ls
+  - pwd
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
