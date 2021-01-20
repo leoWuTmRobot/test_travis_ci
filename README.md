@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/leoWuTmRobot/test_travis_ci.svg?branch=main)](https://travis-ci.com/leoWuTmRobot/test_travis_ci)
+[![codecov](https://codecov.io/gh/leoWuTmRobot/test_travis_ci/branch/main/graph/badge.svg?token=NZJJCU4148)](https://codecov.io/gh/leoWuTmRobot/test_travis_ci)
 # test_travis_ci
 test_travis_ci
 
