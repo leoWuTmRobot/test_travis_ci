@@ -8,8 +8,8 @@ compiler:
 before_install:
   - sudo apt-get install libgtest-dev -y
   - sudo apt-get install cmake
+  - sudo apt-get install lcov
   - sudo pip install codecov
-  - sudo pip install lcov
 install:
   - pwd
   - cd /usr/src/gtest
