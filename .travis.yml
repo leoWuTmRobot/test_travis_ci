@@ -21,10 +21,9 @@ install:
   
 script:
   - cd /home/travis/build/leoWuTmRobot/test_travis_ci
-  - cmake .
+  - cmake ${CMAKE_OPTIONS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .
   - make
-  - ./bin/test_ci_gtest 
-  - sudo ./get_code_cov.sh
+  - make test_ci_coverage
   
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - codecov -t 99101c41-6dde-4ff9-b9d6-60cbb5361751 -X gcov
