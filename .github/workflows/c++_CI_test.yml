@@ -19,8 +19,7 @@ jobs:
           sudo apt-get install lcov
           sudo pip install codecov
     -name : check current folder path
-     run: |
-         pwd
+     run: pwd
     -name : install google test
      run: |
          cd /usr/src/gtest
