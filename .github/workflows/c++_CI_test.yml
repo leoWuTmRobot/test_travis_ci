@@ -13,20 +13,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Print env
-        run: |
+        run:
           echo github.event.action: ${{ github.event.action }}
           echo github.event_name: ${{ github.event_name }}
     - name: Install dependencies
-        run: |
+        run:
           sudo apt-get install libgtest-dev -y
           sudo apt-get install cmake
           sudo apt-get install lcov
           sudo pip install codecov
     -name : check current folder path
-       run: |
+       run:
          pwd
     -name : install google test
-       run: |
+       run:
          cd /usr/src/gtest
          sudo cmake CMakeLists.txt
          sudo make
@@ -35,7 +35,7 @@ jobs:
          sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
          sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
      -name : run test
-        run: |
+        run:
           
           cmake ${CMAKE_OPTIONS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .
           make
