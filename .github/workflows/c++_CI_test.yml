@@ -22,15 +22,15 @@ jobs:
       run: pwd
     - name : install google test
       run: |
-         cd /usr/src/gtest
-         sudo cmake CMakeLists.txt
-         sudo make
-         sudo cp *.a /usr/lib
-         sudo mkdir /usr/local/lib/gtest
-         sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
-         sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
+          cd /usr/src/gtest
+          sudo cmake CMakeLists.txt
+          sudo make
+          sudo cp *.a /usr/lib
+          sudo mkdir /usr/local/lib/gtest
+          sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
+          sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
     - name : run test
       run: |
-         cmake ${CMAKE_OPTIONS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .
-         make
-         make test_ci_coverage
+          cmake ${CMAKE_OPTIONS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .
+          make
+          make test_ci_coverage
