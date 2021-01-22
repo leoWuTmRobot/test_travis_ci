@@ -22,7 +22,6 @@ jobs:
       run: pwd
     - name : install google test
       run: |
-         pwd
          cd /usr/src/gtest
          sudo cmake CMakeLists.txt
          sudo make
